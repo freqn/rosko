@@ -1,5 +1,7 @@
-require_relative 'lib/pizza'
+load 'pizza.rb'
 
-@pizzas.each do |pizza|
-	puts pizza
+def get_pizzas
+	puts @pizzas.join("\n")
 end
+
+get_pizzas

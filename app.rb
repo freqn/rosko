@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'httparty'
 require 'json'
-require_relative 'lib/pizza'
+load 'pizza.rb'
 
 get '/rosko' do
   postback(params[:text], params[:channel_id])
