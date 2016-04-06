@@ -12,8 +12,8 @@ def postback(message, channel)
     case message
     when "wink" then
       message = "Dogs wink too."
-    when "pizza bomb" then
-      message = @pizzas.join("\n")
+    when "pizza" then
+      message = @pizzas.sample
     when "help" then
       message = "`/rosko wink` is my only command, but stay tuned because every office puppy learns new tricks."
     else
