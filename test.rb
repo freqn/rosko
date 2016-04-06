@@ -1,4 +1,3 @@
-require_relative 'pizza'
+require_relative 'helpers'
 
-pizza = Pizza.new
-puts pizza.get_random_pizza
+puts @pizzas.sample
