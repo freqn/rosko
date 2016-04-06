@@ -13,7 +13,7 @@ def postback(message, channel)
   when "wink" then
     message = "Dogs wink too."
   when "pizza" then
-    message = get_pizza
+    message = "http://38.media.tumblr.com/tumblr_m5f7td0RmC1rnov8io1_500.gif"
   when "help" then
     message = "`/rosko wink` is my only command, but stay tuned because every office puppy learns new tricks."
   else
