@@ -13,10 +13,7 @@ def postback(message, channel)
     when "wink" then
       message = "Dogs wink too."
     when "pizza bomb" then
-      @pizzas.each do |pizza|
-      	message = pizza
-      end
-
+      message = @pizzas.join("\n")
     when "help" then
       message = "`/rosko wink` is my only command, but stay tuned because every office puppy learns new tricks."
     else
