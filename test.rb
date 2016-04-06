@@ -1,7 +1,4 @@
-load 'pizza.rb'
+require_relative 'pizza'
 
-def get_pizzas
-	puts @pizzas.join("\n")
-end
-
-get_pizzas
+pizza = Pizza.new
+puts pizza.get_random_pizza
