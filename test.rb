@@ -1,4 +1,5 @@
-load 'app.rb'
+require_relative 'lib/pizza'
 
-
-p @message
+@pizzas.each do |pizza|
+	puts pizza
+end

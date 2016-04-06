@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'httparty'
 require 'json'
+require_relative 'lib/pizza'
 
 get '/rosko' do
   postback(params[:text], params[:channel_id])
@@ -11,6 +12,11 @@ def postback(message, channel)
     case message
     when "wink" then
       message = "Dogs wink too."
+    when "pizza bomb" then
+      @pizzas.each do |pizza|
+      	message = pizza
+      end
+
     when "help" then
       message = "`/rosko wink` is my only command, but stay tuned because every office puppy learns new tricks."
     else
