@@ -1,3 +1,7 @@
-require_relative 'helpers'
+@mystring = "test"
 
-puts @pizzas.sample
+def get_string
+	puts @mystring
+end
+
+get_string
