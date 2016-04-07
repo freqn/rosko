@@ -36,16 +36,19 @@ def postback(message, channel)
 end
 
 
-def paper_rock_scissors(player_throw, computer_throw = @throws.sample)
+def paper_rock_scissors(player_throw)
+  @player_throw = player_throw.to_sym
+  @computer_throw = @throws.sample
+
   if !@throws.include?(player_throw.to_sym)
 		"You must throw one of the following `paper`, `rock` or `scissors`"
 	end
 
-  if player_throw == computer_throw
+  if @player_throw == @computer_throw
 		"You tied me. Try again."
-	elsif computer_throw == @defeat[player_throw]
-		"Nicely done; #{player_throw} beats #{computer_throw}!"
+	elsif @computer_throw == @defeat[@player_throw]
+		"Nicely done; #{@player_throw} beats #{@computer_throw}!"
 	else
-		"Ouch #{computer_throw} beats #{player_throw}. Better luck next time!"
+		"Ouch #{@computer_throw} beats #{@player_throw}. Better luck next time!"
 	end
 end
