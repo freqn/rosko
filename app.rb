@@ -30,7 +30,7 @@ def postback(message, channel)
   when "scissors" then
     message = paper_rock_scissors("scissors")
   when "wink" then
-    message = "Dogs wink too."
+    message = "I'm winking cause I like you."
   when "pizza" then
     message = "http://38.media.tumblr.com/tumblr_m5f7td0RmC1rnov8io1_500.gif"
   when "help" then
