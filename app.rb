@@ -34,7 +34,7 @@ def postback(message, channel)
   when "pizza" then
     message = "http://38.media.tumblr.com/tumblr_m5f7td0RmC1rnov8io1_500.gif"
   when "help" then
-    message = @commands.each { |key, value| "`#{key}` > #{value}"}
+    @commands.each { |key, value| message =  "`#{key}` > #{value}"}
   else
     message = "Umm.. I don't know how to do that. Type `/rosko help` to see what I can do"
   end
