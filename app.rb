@@ -6,6 +6,13 @@ before do
 	content_type :txt
 	@defeat = {rock: :scissors, scissors: :paper, paper: :rock}
 	@throws = @defeat.keys
+  @commands = {
+    help: "Obviously lists what I can do",
+    wink: "Try it out",
+    paper: "You throw paper",
+    rock: "You throw a rock",
+    scissors: "You throw paper"
+  }
 end
 
 
@@ -27,7 +34,7 @@ def postback(message, channel)
   when "pizza" then
     message = "http://38.media.tumblr.com/tumblr_m5f7td0RmC1rnov8io1_500.gif"
   when "help" then
-    message = "`/rosko wink` is my only command, but stay tuned because every office puppy learns new tricks."
+    message = @commands.each { |key, value| "`#{key}` > #{value}"}
   else
     message = "Umm.. I don't know how to do that. Type `/rosko help` to see what I can do"
   end
@@ -51,4 +58,14 @@ def paper_rock_scissors(player_throw)
 	else
 		"Ouch, my #{@computer_throw} beats your #{@player_throw}. Better luck next time!"
 	end
+end
+
+def rosko_commands
+  @commands = {
+    help: "Obviously lists what I can do",
+    wink: "Try it out",
+    paper: "You throw paper",
+    rock: "You throw a rock",
+    scissors: "You throw paper"
+  }
 end
