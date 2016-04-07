@@ -45,10 +45,10 @@ def paper_rock_scissors(player_throw)
 	end
 
   if @player_throw == @computer_throw
-		"You tied me. Try again."
+		"I also thew #{@computer_throw}, so try again."
 	elsif @computer_throw == @defeat[@player_throw]
-		"Nicely done; #{@player_throw} beats #{@computer_throw}!"
+		"Nicely done! Your #{@player_throw} beats my #{@computer_throw}!"
 	else
-		"Ouch #{@computer_throw} beats #{@player_throw}. Better luck next time!"
+		"Ouch, my #{@computer_throw} beats your #{@player_throw}. Better luck next time!"
 	end
 end
